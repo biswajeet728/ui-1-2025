@@ -4,8 +4,17 @@ import { Button } from "./ui/button";
 
 function Header() {
   return (
-    <header className="bg-bgPrimary h-auto md:h-[500px]">
-      <div className="container mx-auto flex items-center justify-between p-4 md:p-0">
+    <header className="bg-bgPrimary h-auto md:h-[500px] relative">
+      <div className="absolute  -top-16 md:-top-20 right-0">
+        <Image
+          src={"/images/round.png"}
+          width={1000}
+          height={1000}
+          alt="Logo"
+          className="h-[200px] w-[200px] md:h-[350px] md:w-[350px] object-contain"
+        />
+      </div>
+      <div className="container mx-auto flex items-center justify-between p-4 md:p-0 z-50">
         <div className="h-16 w-32 md:h-20 md:w-44">
           <Image
             src={"/images/logo.png"}
@@ -16,7 +25,7 @@ function Header() {
           />
         </div>
 
-        <Button className="bg-bgSecondary hover:bg-bgSecondary">
+        <Button className="bg-bgSecondary hover:bg-bgSecondary z-50">
           Book Now
         </Button>
       </div>
